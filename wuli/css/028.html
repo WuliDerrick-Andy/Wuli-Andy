@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 800px;
+			height: 800px;
+			margin: 100px auto;
+			background-color: skyblue;
+			/*animation-name: Andy;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;*/
+			/*animation-timing-function: linear;*/
+			animation-fill-mode: both;
+			animation:Andy 2s infinite alternate;
+		}
+		div:hover{
+			animation-play-state: paused;
+		}
+		@keyframes Andy{
+			from{ 
+				width: 200px;
+				height: 200px;
+				transform: rotate(0deg) scale(1);
+				background-color: skyblue;
+				border-radius: 0%;
+			}
+			to{
+				width: 600px;
+				height: 600px;
+				transform: rotate(1440deg) scale(3);
+				background-color: green;
+				border-radius: 50%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

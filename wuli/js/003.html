@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.AD{
+			width: 400px;
+			height: 400px;
+			margin:200px auto;
+		}
+		.box{
+			width: 200px;
+			height: 50px;
+			display: none;
+		}
+		.box1{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="AD">
+		<input type="button" value="点击按钮解锁隐藏功能" id="ADC" 
+		onmouseover="
+		document.getElementById('box').style.display='block'"
+		onmouseout="
+		document.getElementById('box').style.display='none'"
+		onclick="
+		document.getElementById('box').className='box1';
+		document.getElementById('ADC').style.width='200px';
+		document.getElementById('ADC').style.height='50px';
+		document.getElementById('ADC').style.backgroundColor='blue'">
+		<div class="box" id="box">踹考拉</div>
+	</div>
+</body>
+</html>

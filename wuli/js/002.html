@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.AD{
+			width: 400px;
+			height: 400px;
+			margin:200px auto;
+		}
+		.box{
+			width: 200px;
+			height: 50px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="AD">
+	<!-- <input type="text" 
+	onmouseover="box.style.display='block'" 
+	onmouseout="box.style.display='none'"
+	>输入文本解锁隐藏功能 -->
+	<input type="checkbox" 
+	onmouseover="document.getElementById('box').style.display='block';document.getElementById('box').style.backgroundColor='#fff'" 
+	onmouseout="document.getElementById('box').style.display='none';document.getElementById('box').style.backgroundColor='#0f0'"
+	>   点击按钮解锁隐藏功能
+	<div class="box" id="box">踹考拉</div>
+	</div>
+</body>
+</html>

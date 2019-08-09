@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/all.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.ad>input,a{
+			width: 20%;
+			height: 34px;
+			text-align: center;
+			line-height: 34px;
+			position: fixed;
+			top: 0px;
+			text-decoration: none;
+			font-size: 24px;
+			color: #fff;
+			background-color: rgba(0,0,0,0.7);
+		}
+		input{
+			z-index: 9;
+			opacity: 0;
+
+		}
+		.ad input:checked+a{
+			color: orange;
+			
+		}
+		.ad input:hover+a{
+			background-color: rgba(0,0,0,0.5);
+		}
+		#ad1,#ad1+a{
+			left: 0%
+		}
+		#ad2,#ad2+a{
+			left: 20%
+		}
+		#ad3,#ad3+a{
+			left: 40%
+		}
+		#ad4,#ad4+a{
+			left: 60%
+		}
+		#ad5,#ad5+a{
+			left: 80%
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+			
+		}
+		.ad{
+			width: 100%;
+			height: 100%;
+			/*padding-top: 34px;*/
+			box-sizing: border-box;
+			overflow: hidden;
+
+		}
+		.centent{
+			width: 100%;
+			height: 100%;
+			transition: all 2.5s;
+		}	
+		a{
+			z-index: 3;
+		}
+		.centent .box{
+			width: 100%;
+			height: 100%;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		.ad #ad1:checked~.centent{
+			transform: translateY(0%);
+		}
+		.ad #ad2:checked~.centent{
+			transform: translateY(-100%);
+		}
+		.ad #ad3:checked~.centent{
+			transform: translateY(-200%);
+		}
+		.ad #ad4:checked~.centent{
+			transform: translateY(-300%);
+		}
+		.ad #ad5:checked~.centent{
+			transform: translateY(-400%);
+		}
+		.ai1{
+			background-image: url(home.png);
+		}
+		.ai2{
+			background-image: url(service.png);
+		}
+		.ai3{
+			background-image: url(about.png);
+		}
+		.ai4{
+			background-image: url(team.png);
+		}
+		.ai5{
+			background-image: url(contact.png);
+		}
+		.ad #ad1:checked~.centent>.ai1{
+			animation:Andy 3s;
+		}
+		.ad #ad2:checked~.centent>.ai2{
+			animation:Andy 3s;
+		}
+		.ad #ad3:checked~.centent>.ai3{
+			animation:Andy 3s;
+		}
+		.ad #ad4:checked~.centent>.ai4{
+			animation:Andy 3s;
+		}
+		.ad #ad5:checked~.centent>.ai5{
+			animation:Andy 3s;
+		}
+		@keyframes Andy{
+			from{
+				opacity: 0;
+			}
+			to{
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="ad">
+		<input type="radio" name="nav" id="ad1" checked>
+		<a href="javescript:;"><i class="fas fa-home"></i>Home</a>
+		<input type="radio" name="nav" id="ad2">
+		<a href="javescript:;"><i class="fas fa-concierge-bell"></i>Serive</a>
+		<input type="radio" name="nav" id="ad3">
+		<a href="javescript:;"><i class="far fa-building"></i>About</a>
+		<input type="radio" name="nav" id="ad4">
+		<a href="javescript:;"><i class="fas fa-users"></i>Team</a>
+		<input type="radio" name="nav" id="ad5">
+		<a href="javescript:;"><i class="fas fa-phone"></i>Contact</a>
+		<div class="centent">
+			<div class="box ai1"></div>
+			<div class="box ai2"></div>
+			<div class="box ai3"></div>
+			<div class="box ai4"></div>
+			<div class="box ai5"></div>
+		</div>
+	</div>
+</body>
+</html>

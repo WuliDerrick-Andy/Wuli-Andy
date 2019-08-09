@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.father{
+			width: 9px;
+			height: 9px;
+			margin: 50px auto;
+			background-color: skyblue;
+			position: relative;
+		}
+		.son{
+			position: absolute;
+			width: 3px;
+			height: 3px;
+			background-color: #000;
+			animation:Andy 0.3s infinite;
+		}
+		@keyframes Andy {
+			0%{
+				top: 0px;
+				left: 0px;
+			}
+			25%{
+				top: 0px;
+				left: 6px;
+			}
+			50%{
+				top: 6px;
+				left: 6px;
+			}
+			75%{
+				top: 6px;
+				left: 0px;
+			}
+			100%{
+				top: 0px;
+				left: 0px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</body>
+</html>

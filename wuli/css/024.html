@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box0{
+			margin: 200px auto;
+			width: 500px;
+			height: 500px;
+			border: 2px solid #000;
+			/*background-color: #325643;*/
+			position: relative;
+		}
+		.box1{
+			position: absolute;
+			width: 500px;
+			height: 500px;
+			transform:rotate(10deg);background-color: yellow;
+			transition:transform 3s;
+			transform-origin: left top;
+		}
+		.box2{
+			position: absolute;
+			width: 500px;
+			height: 500px;
+			transform:rotate(30deg);background-color: red;
+			transition:transform 3s;
+			transform-origin: left top;
+		}
+		.box4{
+			position: absolute;
+			width: 500px;
+			height: 500px;
+			transform:rotate(50deg);background-color: pink;
+			transition:transform 3s;
+			transform-origin: left top;
+		}
+		.box3{
+			position: absolute;
+			width: 500px;
+			height: 500px;
+			transform:rotate(70deg);background-color: blue;
+			transition:transform 3s;
+			transform-origin: left top;
+		}
+		.box0:hover .box1{
+			transform:rotate(1440deg);
+		}
+		.box0:hover .box2{
+			transform:rotate(1440deg);
+		}
+		.box0:hover .box4{
+			transform:rotate(1440deg);
+		}
+		.box0:hover .box3{
+			transform:rotate(1440deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="box0">
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box4"></div>
+		<div class="box3"></div>
+	</div>
+</body>
+</html>

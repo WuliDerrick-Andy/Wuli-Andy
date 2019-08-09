@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.father1,.father2{
+			/*border: 2px solid #000;*/
+			/*clear: both;*/
+			background-color: #3ac；
+		}
+		.son1,.son2,.son3{
+			width: 150px;
+			height: 150px;
+			background-color: #eac;
+			float: left;
+		}
+		.son4,.son5,.son6{
+			width: 150px;
+			height: 150px;
+			background-color: #ade;
+			float: left;
+		}
+		/*.wall{
+			clear: both;
+		}*/
+		.clearfix:after{
+   			content: "";
+    		clear: both;
+    		display: block;
+    		height: 0px;
+    		visibility: hidden;
+    	}
+		/*.clearfix{
+		*zoom:1;
+		}*/
+	</style>
+</head>
+<body>
+	<div class="father1 clearfix">
+		<div class="son1">1</div>
+		<div class="son2">2</div>
+		<div class="son3">3</div>
+	</div>
+	<!-- <div class="wall"></div> -->
+	<div class="father2">
+		<div class="son4">4</div>
+		<div class="son5">5</div>
+		<div class="son6">6</div>
+	</div>
+</body>
+</html>
