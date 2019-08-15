@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+			margin: 100px auto;
+		}
+		.toskyblue{
+			background-color: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" id="btn1" value="蓝色">
+	<input type="button" id="btn2" value="天蓝">
+	<input type="button" id="btn3" value="颜色属性">
+	<div id="box"></div>
+</body>
+<script>
+	var oBtn1 = document.getElementById('btn1')
+	var oBtn2 = document.getElementById('btn2')
+	var oBtn3 = document.getElementById('btn3')
+	var box = document.getElementById('box')
+	oBtn1.onclick = function(){
+		box.style.backgroundColor = 'blue'
+	} 
+	oBtn2.onclick = function(){
+		box.className = 'toskyblue'
+	} 
+	oBtn3.onclick = function(){
+		// alert(box.style.backgroundColor)
+		alert(getComputedStyle(box,false).backgroundColor)
+		// alert(getComputedStyle(box,":after")['Color'])
+	} 
+</script>
+</html>

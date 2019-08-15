@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box1,.box2{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" id="btn1" value="变高">
+	<input type="button" id="btn2" value="变宽">
+	<input type="button" id="btn3" value="变色">
+	<div class="box1" id="box1"></div>
+	<div class="box2" id="box2"></div>
+</body>
+<script>
+	var oBtn1 = document.getElementById('btn1')
+	var oBtn2 = document.getElementById('btn2')
+	var oBtn3 = document.getElementById('btn3')
+	var box1 = document.getElementById('box1')
+	var box2 = document.getElementById('box2')
+	function css(oJt,attr,val){
+		oJt.style[attr] = val
+	}
+	oBtn1.onclick = function(){
+		// box.style.height='400px'
+		css(box1,'height','400px')
+		css(box2,'height','400px')
+	}
+	oBtn2.onclick = function(){
+		// box.style.height='400px'
+		css(box1,'width','400px')
+		css(box2,'width','400px')
+	}
+	oBtn3.onclick = function(){
+		// box.style.height='400px'
+		css(box1,'backgroundColor','skyblue')
+		css(box2,'backgroundColor','skyblue')
+	}
+	
+</script>
+</html>

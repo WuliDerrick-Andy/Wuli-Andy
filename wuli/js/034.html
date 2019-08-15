@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" id="btn1" value="变高">
+	<input type="button" id="btn2" value="变宽">
+	<input type="button" id="btn3" value="变色">
+	<div class="box" id="box"></div>
+</body>
+<script>
+	var oBtn1 = document.getElementById('btn1')
+	var oBtn2 = document.getElementById('btn2')
+	var oBtn3 = document.getElementById('btn3')
+	var box = document.getElementById('box')
+	function css(oJt,attr,val){
+		console.log(arguments)
+		if (arguments.length == 2) {
+			alert(getComputedStyle(oJt,false)[attr])
+		}else if (arguments.length == 3) {
+			oJt.style[attr] = val
+		}
+	}
+	oBtn1.onclick = function(){
+		// box.style.height='400px'
+		css(box,'height','400px')
+	}
+	oBtn2.onclick = function(){
+		// box.style.height='400px'
+		css(box,'width','400px')
+	}
+	oBtn3.onclick = function(){
+		// box.style.height='400px'
+		css(box,'backgroundColor','skyblue')
+	}
+</script>
+</html>

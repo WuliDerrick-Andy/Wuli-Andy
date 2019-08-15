@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.space{
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+		}
+		.star{
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			line-height: 20px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	
+</body>
+<script>
+	for (var i = 1; i <= 10; i++) {
+	document.write("<p>");
+		for(var j = 1; j <= 10-i;j ++) {
+			document.write("<span class='space'></span>");
+		}
+		for(var k = 1; k <= i;k ++) {
+			document.write("<span class='star'>*</span>");
+		}	
+	document.write("</p>");
+	}
+</script>
+</html>
